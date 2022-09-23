@@ -1,10 +1,6 @@
-[
-  {
-    "labels": [
-      "Tetranode"
-    ],
-    "links": {
-      "twitter": "https://twitter.com/Tetranode"
-    }
+{
+  "labels": ["Tetranode"],
+  "links": {
+    "twitter": "https://twitter.com/Tetranode"
   }
-]
+}

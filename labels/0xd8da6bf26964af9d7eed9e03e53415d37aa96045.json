@@ -1,10 +1,6 @@
-[
-  {
-    "labels": [
-      "Vitalik Buterin"
-    ],
-    "links": {
-      "twitter": "https://twitter.com/VitalikButerin"
-    }
+{
+  "labels": ["Vitalik Buterin"],
+  "links": {
+    "twitter": "https://twitter.com/VitalikButerin"
   }
-]
+}
