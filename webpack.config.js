@@ -17,6 +17,9 @@ module.exports = {
   },
   output: {
     filename: "index.js",
+    library: "llamafolio-labels",
+    libraryTarget: "umd",
     path: path.resolve(__dirname, "build"),
+    globalObject: "this",
   },
 };

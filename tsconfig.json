@@ -1,14 +1,11 @@
 {
-  "exclude": ["scripts/**/*"],
   "compilerOptions": {
-    "resolveJsonModule": true,
     "target": "es2015",
-    "module": "commonjs",
+    "module": "es6",
     "declaration": true,
     "outDir": "./build",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
     "types": ["node", "webpack-env"]
   }
 }
