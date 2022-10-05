@@ -8,6 +8,7 @@
     "outDir": "./build",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["node", "webpack-env"]
   }
 }
