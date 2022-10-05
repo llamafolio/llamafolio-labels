@@ -1,6 +1,6 @@
 {
   "name": "llamafolio-labels",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "List of labels used by LlamaFolio.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "start": "npm run build && node build/index.js",
-    "build": "tsc",
+    "build": "tsc && cp -R labels build/",
     "prepublishOnly": "npm run build"
   },
   "repository": {
