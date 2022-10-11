@@ -1,5 +1,5 @@
 {
-  "labels": ["Tetranode"],
+  "labels": [{ "type": "info", "value": "Tetranode" }],
   "links": {
     "twitter": "https://twitter.com/Tetranode"
   }

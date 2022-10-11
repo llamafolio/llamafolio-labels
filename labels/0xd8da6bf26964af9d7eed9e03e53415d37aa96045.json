@@ -1,5 +1,5 @@
 {
-  "labels": ["Vitalik Buterin"],
+  "labels": [{ "type": "info", "value": "Vitalik Buterin" }],
   "links": {
     "twitter": "https://twitter.com/VitalikButerin"
   }
