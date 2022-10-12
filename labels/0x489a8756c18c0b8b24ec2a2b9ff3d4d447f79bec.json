@@ -1,3 +1,6 @@
 {
-  "labels": ["Binance Bridge Exploiter", "Hack"]
+  "labels": [
+    { "type": "danger", "value": "Binance Bridge Exploiter" },
+    { "type": "danger", "value": "Hack" }
+  ]
 }

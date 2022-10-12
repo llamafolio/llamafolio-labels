@@ -3,7 +3,7 @@
 function requireAll(requireContext: any) {
   const keys = requireContext.keys();
   const values = keys.map(requireContext);
-  const registry: { [chain: string]: Label } = {};
+  const registry: { [chain: string]: AddressLabels } = {};
 
   for (let i = 0; i < keys.length; i++) {
     const addressWithoutExtension = keys[i].split(".json")[0];
@@ -16,13 +16,20 @@ function requireAll(requireContext: any) {
   return registry;
 }
 
-const registry: { [key: string]: Label } = requireAll(
+const registry: { [key: string]: AddressLabels } = requireAll(
   require.context("./labels", false, /.json$/)
 );
 
 export interface Label {
-  labels: string[];
-  links: { [key: string]: string };
+  type: "info" | "warning" | "danger";
+  value: string;
+}
+
+type SocialLabel = "twitter" | "telegram" | "github";
+
+export interface AddressLabels {
+  labels: Label[];
+  links: { [k in SocialLabel]: string };
 }
 
 /**
