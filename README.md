@@ -28,3 +28,11 @@ To add a new label, use the following chart to know the property type.
 | info    | blue   | Known addresses or useful services        |
 | warning | yellow | Exploited contracts or dangerous services |
 | danger  | red    | Hackers, exploiters, or scammer addresses |
+
+For social media links, only the following networks are available:
+
+| Social Media |
+| ------------ |
+| twitter      |
+| telegram     |
+| github       |
