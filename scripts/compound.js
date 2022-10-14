@@ -28,16 +28,21 @@ async function fetchDelegates() {
     }
   }
 
-  console.log(foundDelegates.length)
-  console.log(foundDelegates)
+  // console.log(foundDelegates.length)
+  // console.log(foundDelegates)
   for (var key in foundDelegates) {
 
     let path = `./labels/${key}.json`
     if(!fs.existsSync(path)) {
-      console.log("File not found");
+      //address does not exist so write new address
+      //fs.writeFileSync(path, JSON.stringify(foundDelegates[key], null, 2));
     } else {
-      // const rawDataFS = await fs.readFileSync(, 'utf8');
-      // console.log(rawDataFS)
+      const rawDataFS = await fs.readFileSync(path, 'utf8');
+      let existingLabels = JSON.parse(rawDataFS)
+      for (var i = 0; i < existingLabels.length; i++) {
+        let tLabel = existingLabels[i]
+        //check duplicate labels
+      }
     }
 
   }
