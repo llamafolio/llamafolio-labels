@@ -1,0 +1,7 @@
+{
+  "labels": [{ "type": "info", "value": "Polychain Capital" }, { "type": "info", "value": "VCs" }, { "type": "info", "value": "Compound Delegate" }],
+  "links": {
+    "website": "https://polychain.capital/",
+    "twitter": "https://twitter.com/polychaincap"
+  }
+}
