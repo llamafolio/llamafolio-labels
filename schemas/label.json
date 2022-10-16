@@ -1,42 +1,104 @@
 {
-  "id": "http://json-schema.org/draft-04/schema#",
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "https://json-schema.org/draft/2019-09/schema",
   "type": "object",
+  "default": {},
+  "title": "Llamafolio Label Schema",
+  "required": ["labels", "links"],
   "properties": {
     "labels": {
       "type": "array",
-      "items": [
-        {
-          "type": "object",
-          "properties": {
-            "type": {
-              "type": "string"
-            },
-            "value": {
-              "type": "string"
-            }
+      "default": [],
+      "title": "Labels",
+      "items": {
+        "type": "object",
+        "default": {},
+        "title": "Label item",
+        "required": ["type", "value"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "default": "",
+            "title": "Type of the label item",
+            "examples": ["info"]
           },
-          "required": ["type", "value"]
-        }
+          "value": {
+            "type": "string",
+            "default": "",
+            "title": "The value of the label item",
+            "examples": ["Llamafolio"]
+          }
+        },
+        "examples": [
+          {
+            "type": "info",
+            "value": "Llamafolio"
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "type": "info",
+            "value": "Llamafolio"
+          }
+        ]
       ]
     },
     "links": {
       "type": "object",
+      "default": {},
+      "title": "Links for the address",
+      "required": [],
       "properties": {
-        "website": {
-          "type": "string"
-        },
         "twitter": {
-          "type": "string"
-        },
-        "github": {
-          "type": "string"
+          "type": "string",
+          "default": "",
+          "title": "Twitter link for the address",
+          "examples": ["https://twitter.com/llamafolio"]
         },
         "telegram": {
-          "type": "string"
+          "type": "string",
+          "default": "",
+          "title": "Telegram link for the address",
+          "examples": ["https://t.me/defillama_tg"]
+        },
+        "website": {
+          "type": "string",
+          "default": "",
+          "title": "Website link for the address",
+          "examples": ["https://llamafolio.io"]
+        },
+        "github": {
+          "type": "string",
+          "default": "",
+          "title": "Github link for the address",
+          "examples": ["https://github.com/llamafolio"]
         }
-      }
+      },
+      "examples": [
+        {
+          "twitter": "https://twitter.com/llamafolio",
+          "telegram": "https://t.me/defillama_tg",
+          "website": "https://llamafolio.io",
+          "github": "https://github.com/llamafolio"
+        }
+      ]
     }
   },
-  "required": ["labels", "links"]
+  "examples": [
+    {
+      "labels": [
+        {
+          "type": "info",
+          "value": "Llamafolio"
+        }
+      ],
+      "links": {
+        "twitter": "https://twitter.com/llamafolio",
+        "telegram": "https://t.me/defillama_tg",
+        "website": "https://llamafolio.io",
+        "github": "https://github.com/llamafolio"
+      }
+    }
+  ]
 }
