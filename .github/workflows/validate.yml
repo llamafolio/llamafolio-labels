@@ -6,6 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: 'prettier'
       - name: Validate
         uses: docker://orrosenblatt/validate-json-action:latest
         env:
