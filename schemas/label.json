@@ -1,0 +1,104 @@
+{
+  "$id": "https://json-schema.org/draft/2019-09/schema",
+  "type": "object",
+  "default": {},
+  "title": "LlamaFolio Label Schema",
+  "required": ["labels", "links"],
+  "properties": {
+    "labels": {
+      "type": "array",
+      "default": [],
+      "title": "Labels",
+      "items": {
+        "type": "object",
+        "default": {},
+        "title": "Label item",
+        "required": ["type", "value"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "default": "",
+            "title": "Type of the label item",
+            "examples": ["info"]
+          },
+          "value": {
+            "type": "string",
+            "default": "",
+            "title": "The value of the label item",
+            "examples": ["LlamaFolio"]
+          }
+        },
+        "examples": [
+          {
+            "type": "info",
+            "value": "LlamaFolio"
+          }
+        ]
+      },
+      "examples": [
+        [
+          {
+            "type": "info",
+            "value": "LlamaFolio"
+          }
+        ]
+      ]
+    },
+    "links": {
+      "type": "object",
+      "default": {},
+      "title": "Links for the address",
+      "required": [],
+      "properties": {
+        "twitter": {
+          "type": "string",
+          "default": "",
+          "title": "Twitter link for the address",
+          "examples": ["https://twitter.com/llamafolio"]
+        },
+        "telegram": {
+          "type": "string",
+          "default": "",
+          "title": "Telegram link for the address",
+          "examples": ["https://t.me/defillama_tg"]
+        },
+        "website": {
+          "type": "string",
+          "default": "",
+          "title": "Website link for the address",
+          "examples": ["https://llamafolio.com"]
+        },
+        "github": {
+          "type": "string",
+          "default": "",
+          "title": "Github link for the address",
+          "examples": ["https://github.com/llamafolio"]
+        }
+      },
+      "examples": [
+        {
+          "twitter": "https://twitter.com/llamafolio",
+          "telegram": "https://t.me/defillama_tg",
+          "website": "https://llamafolio.com",
+          "github": "https://github.com/llamafolio"
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "labels": [
+        {
+          "type": "info",
+          "value": "LlamaFolio"
+        }
+      ],
+      "links": {
+        "twitter": "https://twitter.com/llamafolio",
+        "telegram": "https://t.me/defillama_tg",
+        "website": "https://llamafolio.com",
+        "github": "https://github.com/llamafolio"
+      }
+    }
+  ]
+}

@@ -1,5 +1,9 @@
 {
-  "labels": [{ "type": "info", "value": "Paradigm" }, { "type": "info", "value": "VCs" }, { "type": "info", "value": "Compound Delegate" }],
+  "labels": [
+    { "type": "info", "value": "Paradigm" },
+    { "type": "info", "value": "VCs" },
+    { "type": "info", "value": "Compound Delegate" }
+  ],
   "links": {
     "website": "https://www.paradigm.xyz/",
     "twitter": "https://twitter.com/paradigm"

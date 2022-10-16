@@ -1,5 +1,9 @@
 {
-  "labels": [{ "type": "info", "value": "Bain Capital Ventures" }, { "type": "info", "value": "VCs" }, { "type": "info", "value": "Compound Delegate" }],
+  "labels": [
+    { "type": "info", "value": "Bain Capital Ventures" },
+    { "type": "info", "value": "VCs" },
+    { "type": "info", "value": "Compound Delegate" }
+  ],
   "links": {
     "website": "https://baincapitalventures.com/",
     "twitter": "https://twitter.com/BainCapVC"

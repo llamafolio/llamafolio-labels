@@ -1,5 +1,9 @@
 {
-  "labels": [{ "type": "info", "value": "Penn Blockchain" }, { "type": "info", "value": "University" }, { "type": "info", "value": "Compound Delegate" }],
+  "labels": [
+    { "type": "info", "value": "Penn Blockchain" },
+    { "type": "info", "value": "University" },
+    { "type": "info", "value": "Compound Delegate" }
+  ],
   "links": {
     "website": "https://www.pennblockchain.com/",
     "twitter": "https://twitter.com/PennBlockchain"

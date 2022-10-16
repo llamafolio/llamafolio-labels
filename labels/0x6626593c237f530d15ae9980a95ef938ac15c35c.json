@@ -1,5 +1,9 @@
 {
-  "labels": [{ "type": "info", "value": "Gauntlet" }, { "type": "info", "value": "VCs" }, { "type": "info", "value": "Compound Delegate" }],
+  "labels": [
+    { "type": "info", "value": "Gauntlet" },
+    { "type": "info", "value": "VCs" },
+    { "type": "info", "value": "Compound Delegate" }
+  ],
   "links": {
     "website": "https://gauntlet.network/",
     "twitter": "https://twitter.com/gauntletnetwork"

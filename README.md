@@ -1,6 +1,6 @@
-## Llamafolio Labels
+## LlamaFolio Labels
 
-This repository holds the information for the Llamafolio app to categorize address labels.
+This repository holds the information for the LlamaFolio app to categorize address labels.
 
 The available labels to use for address are two types: helpful information and social media.
 
@@ -12,7 +12,7 @@ The content of the file should be like this:
 
 ```JSON
 {
-  "labels": [{ "type": "info", "value": "llamafolio" }],
+  "labels": [{ "type": "info", "value": "LlamaFolio" }],
   "links": {
     "twitter": "https://twitter.com/llamafolio"
   }
@@ -36,3 +36,4 @@ For social media links, only the following networks are available:
 | twitter      |
 | telegram     |
 | github       |
+| website      |

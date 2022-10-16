@@ -8,9 +8,10 @@
     "build"
   ],
   "scripts": {
-    "start": "npm run build && node build/index.js",
     "build": "webpack --config webpack.config.js",
-    "prepublishOnly": "npm run build"
+    "format": "prettier --ignore-path .gitignore '**/*.{md,json,js,ts}' --write",
+    "prepublishOnly": "npm run build",
+    "start": "npm run build && node build/index.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
     "ts-loader": "^9.4.1",
     "typescript": "^4.8.3",
     "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "webpack-cli": "^4.10.0",
+    "prettier": "^2.7.1"
   }
 }

@@ -1,5 +1,8 @@
 {
-  "labels": [{ "type": "info", "value": "Geoffrey Hayes" }, { "type": "info", "value": "Compound Delegate" }],
+  "labels": [
+    { "type": "info", "value": "Geoffrey Hayes" },
+    { "type": "info", "value": "Compound Delegate" }
+  ],
   "links": {
     "twitter": "https://twitter.com/justhgh"
   }

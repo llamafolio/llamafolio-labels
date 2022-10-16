@@ -1,12 +1,13 @@
 {
   "labels": [
     {
-      "type": "info",
+      "type": "danger",
       "value": "Hack"
     },
     {
-      "type": "info",
+      "type": "danger",
       "value": "Wintermute Hacker"
     }
-  ]
+  ],
+  "links": {}
 }
