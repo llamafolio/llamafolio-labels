@@ -1,5 +1,9 @@
 {
-  "labels": [{ "type": "info", "value": "Monet Supply" }, { "type": "info", "value": "Governance Participant" }, { "type": "info", "value": "Compound Delegate" }],
+  "labels": [
+    { "type": "info", "value": "Monet Supply" },
+    { "type": "info", "value": "Governance Participant" },
+    { "type": "info", "value": "Compound Delegate" }
+  ],
   "links": {
     "twitter": "https://twitter.com/MonetSupply"
   }
