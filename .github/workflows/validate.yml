@@ -1,0 +1,13 @@
+on: push
+name: Validate Labels JSON files
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Validate
+        uses: docker://orrosenblatt/validate-json-action:latest
+        env:
+          INPUT_SCHEMA: ./schemas/label.schema
+          INPUT_JSONS: ./labels/*.json
