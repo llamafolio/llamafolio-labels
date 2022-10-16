@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Set JSON files
-        run: echo "INPUT_JSONS=$(find ./labels/*.json | tr '\n' ',')" >> $GITHUB_ENV
+        run: echo "INPUT_JSONS=$(find ./labels/*.json | tr '\n' ',' | rev | cut -c2- | rev)" >> $GITHUB_ENV
       - name: Validate
         uses: docker://orrosenblatt/validate-json-action:latest
         env:
