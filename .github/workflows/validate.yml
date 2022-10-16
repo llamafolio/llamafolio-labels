@@ -5,10 +5,9 @@ jobs:
     name: Validate
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Validate
-        uses: snapcart/json-schema-validator@v1.0.0
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          json_schema: ./schemas/label.schema
-          json_path_pattern: ./labels/*.json$
+        uses: docker://orrosenblatt/validate-json-action:latest
+        env:
+          INPUT_SCHEMA: ./schemas/label.schema
+          INPUT_JSONS: ./labels/*.json
