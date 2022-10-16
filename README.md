@@ -36,3 +36,4 @@ For social media links, only the following networks are available:
 | twitter      |
 | telegram     |
 | github       |
+| website      |
