@@ -7,7 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Validate
-        uses: docker://orrosenblatt/validate-json-action:latest
-        env:
-          INPUT_SCHEMA: ./schemas/label.json
-          INPUT_JSONS: ./labels/*.json
+        uses: snapcart/json-schema-validator@v1.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          json_schema: ./schemas/label.json
+          json_path_pattern: ./labels/*.json$
