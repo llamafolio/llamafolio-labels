@@ -2,7 +2,7 @@
   "$id": "https://json-schema.org/draft/2019-09/schema",
   "type": "object",
   "default": {},
-  "title": "Llamafolio Label Schema",
+  "title": "LlamaFolio Label Schema",
   "required": ["labels", "links"],
   "properties": {
     "labels": {
@@ -25,13 +25,13 @@
             "type": "string",
             "default": "",
             "title": "The value of the label item",
-            "examples": ["Llamafolio"]
+            "examples": ["LlamaFolio"]
           }
         },
         "examples": [
           {
             "type": "info",
-            "value": "Llamafolio"
+            "value": "LlamaFolio"
           }
         ]
       },
@@ -39,7 +39,7 @@
         [
           {
             "type": "info",
-            "value": "Llamafolio"
+            "value": "LlamaFolio"
           }
         ]
       ]
@@ -66,7 +66,7 @@
           "type": "string",
           "default": "",
           "title": "Website link for the address",
-          "examples": ["https://llamafolio.io"]
+          "examples": ["https://llamafolio.com"]
         },
         "github": {
           "type": "string",
@@ -79,7 +79,7 @@
         {
           "twitter": "https://twitter.com/llamafolio",
           "telegram": "https://t.me/defillama_tg",
-          "website": "https://llamafolio.io",
+          "website": "https://llamafolio.com",
           "github": "https://github.com/llamafolio"
         }
       ]
@@ -90,13 +90,13 @@
       "labels": [
         {
           "type": "info",
-          "value": "Llamafolio"
+          "value": "LlamaFolio"
         }
       ],
       "links": {
         "twitter": "https://twitter.com/llamafolio",
         "telegram": "https://t.me/defillama_tg",
-        "website": "https://llamafolio.io",
+        "website": "https://llamafolio.com",
         "github": "https://github.com/llamafolio"
       }
     }
