@@ -1,0 +1,52 @@
+name: 'Address Tags'
+description: 'LlamaFolio Address Tags'
+title: '[Address Tags]: '
+body:
+  - type: 'markdown'
+    attributes:
+      value: |
+        Thanks for helping the LlamaFolio team to increase the amount of organized information by providing tags to track.
+
+        Please provide a source to manually verify the truthfulness of the information.
+  - type: 'input'
+    id: 'address'
+    attributes:
+      label: 'Address'
+    validations:
+      required: true
+  - type: 'input'
+    id: 'website'
+    attributes:
+      label: 'Website'
+  - type: 'input'
+    id: 'twitter'
+    attributes:
+      label: 'Twitter'
+  - type: 'input'
+    id: 'github'
+    attributes:
+      label: 'GitHub'
+  - type: 'input'
+    id: 'telegram'
+    attributes:
+      label: 'Telegram'
+  - type: 'textarea'
+    id: 'list-address-labels'
+    attributes:
+      label: 'Submit the list of address labels'
+      description: |
+        Provide a comma-separated list with the labels and their property type.
+        One line per label.
+
+        For example:
+        Binance Hack, warning
+        LlamaFolio, info
+
+        To see the list of available property types check:
+        https://github.com/llamafolio/llamafolio-labels#labels-for-an-address
+  - type: 'textarea'
+    id: 'source-information'
+    attributes:
+      label: 'Source of Information (to verify the labels)'
+    validations:
+      required: true
