@@ -10,8 +10,10 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "format": "prettier --ignore-path .gitignore '**/*.{md,json,js,ts}' --write",
+    "postinstall": "npm run update-twitter-labels",
     "prepublishOnly": "npm run build",
-    "start": "npm run build && node build/index.js"
+    "start": "npm run build && node build/index.js",
+    "update-twitter-labels": "curl -o twitter-labels.json https://raw.githubusercontent.com/ultrasoundmoney/ens_twitter_accounts/main/ens_twitter.json"
   },
   "repository": {
     "type": "git",
