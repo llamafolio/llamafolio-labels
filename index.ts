@@ -1,3 +1,5 @@
+import twitterLabels from 'twitter-labels.json'
+
 // Read all files from "labels" folder using webpack
 // and create a mapping of address - labels
 function requireAll(requireContext: any) {
@@ -35,6 +37,16 @@ export interface AddressLabels {
 /**
  * @param address lowercase hex string. ex: "0x0000000000000000000000000000000000000000"
  */
-export function getLabel(address: string) {
-  return registry[address];
+export function getLabel(address: string, ensName?: string) {
+  const label = registry[address];
+  
+  if (ensName) {
+    const twitter = (twitterLabels as { name: string; handle: string }[]).find((twitter) => twitter.name === ensName)
+
+    if (twitter) {
+      label.links = { ...label.links, twitter: `https://twitter.com/${twitter.handle}` }
+    }
+  }
+
+  return 
 }
