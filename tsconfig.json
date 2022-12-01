@@ -3,6 +3,7 @@
     "target": "es2015",
     "module": "es6",
     "declaration": true,
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "outDir": "./build",
     "strict": true,
