@@ -41,8 +41,8 @@ export function getLabel(address: string, ensName?: string): AddressLabels {
   const registryLabels = registry[address];
 
   const labelt = {
-    links: registryLabels.links ?? {},
-    labels: registryLabels.labels ?? [],
+    links: registryLabels?.links ?? {},
+    labels: registryLabels?.labels ?? [],
   };
 
   if (ensName) {
