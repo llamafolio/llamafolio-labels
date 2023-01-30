@@ -1,6 +1,6 @@
 {
-  "name": "llamafolio-labels",
-  "version": "0.1.1",
+  "name": "@llamafolio/labels",
+  "version": "0.1.2",
   "description": "List of labels used by LlamaFolio.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
