@@ -30,6 +30,7 @@ export interface Label {
 type SocialLabel = "twitter" | "telegram" | "github";
 
 export interface AddressLabels {
+  address: string
   labels: Label[];
   links: { [k in SocialLabel]: string };
 }
@@ -41,6 +42,7 @@ export function getLabel(address: string, ensName?: string): AddressLabels {
   const registryLabels = registry[address];
 
   const labelt = {
+    address,
     links: registryLabels?.links ?? {},
     labels: registryLabels?.labels ?? [],
   };
@@ -59,4 +61,48 @@ export function getLabel(address: string, ensName?: string): AddressLabels {
   }
 
   return labelt;
+}
+
+const searchRegistry: Array<AddressLabels> = (function() {
+  const requireContext = require.context("./labels", false, /.json$/);
+  const keys = requireContext.keys();
+  const values = keys.map(requireContext) as Array<AddressLabels>
+
+  return values
+})()
+
+
+export interface SearchLabels extends Omit<AddressLabels, 'links'> {
+  links: Array<{ name: SocialLabel, value: string }>
+}
+
+/**
+ * @param address lowercase string. ex: "founder"
+ */
+export function searchLabel(searchTerm: string): Array<SearchLabels> {
+  const results = searchRegistry.map(addressLabels => {
+    const labels = addressLabels.labels.filter(label => label.value.toLowerCase().includes(searchTerm))
+
+    const links = (Object.keys(addressLabels.links) as Array<SocialLabel>).reduce((acc, key) => {
+      const socialValue = addressLabels.links[key]
+
+      if (socialValue.toLowerCase().includes(searchTerm)) {
+        acc.push({name: key, value: socialValue })
+      }
+
+      return acc
+    }, [] as SearchLabels['links'])
+
+    if (labels.length || Object.keys(links).length) {
+      return {
+        address: addressLabels.address,
+        labels,
+        links
+      }
+    }
+
+    return null
+  }).filter((result): result is SearchLabels => !!result)
+
+  return results || []
 }

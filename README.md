@@ -12,6 +12,7 @@ The content of the file should be like this:
 
 ```JSON
 {
+  "address": "0xADDRESS",
   "labels": [{ "type": "info", "value": "LlamaFolio" }],
   "links": {
     "twitter": "https://twitter.com/llamafolio"

@@ -5,6 +5,11 @@
   "title": "LlamaFolio Label Schema",
   "required": ["labels", "links"],
   "properties": {
+    "address:": {
+      "type": "string",
+      "default": " ",
+      "example": "0x0000000000000000000000000000000000000000"
+    },
     "labels": {
       "type": "array",
       "default": [],
