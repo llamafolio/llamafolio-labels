@@ -1,4 +1,4 @@
-import twitterLabels from "./twitter-labels.json";
+import twitterLabels from "../twitter-labels.json";
 
 // Read all files from "labels" folder using webpack
 // and create a mapping of address - labels
